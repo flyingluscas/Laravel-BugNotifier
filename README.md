@@ -50,17 +50,17 @@ If you discover any security related issues, please email lucas.pires.mattos@gma
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/flyingluscas/BugNotifier.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/flyingluscas/bug-notifier.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/flyingluscas/Laravel-BugNotifier/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/flyingluscas/Laravel-BugNotifier.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/flyingluscas/Laravel-BugNotifier.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/flyingluscas/BugNotifier.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/flyingluscas/bug-notifier.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/flyingluscas/BugNotifier
+[link-packagist]: https://packagist.org/packages/flyingluscas/bug-notifier
 [link-travis]: https://travis-ci.org/flyingluscas/Laravel-BugNotifier
 [link-scrutinizer]: https://scrutinizer-ci.com/g/flyingluscas/Laravel-BugNotifier/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/flyingluscas/Laravel-BugNotifier
-[link-downloads]: https://packagist.org/packages/flyingluscas/BugNotifier
+[link-downloads]: https://packagist.org/packages/flyingluscas/bug-notifier
 [link-author]: https://github.com/flyingluscas
 [link-contributors]: ../../contributors
