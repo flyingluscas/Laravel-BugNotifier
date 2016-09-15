@@ -1,5 +1,5 @@
 {
-    "name": "flyingluscas/BugNotifier",
+    "name": "flyingluscas/bug-notifier",
     "type": "library",
     "description": "Track down bugs on your applications by using notifications.",
     "keywords": [

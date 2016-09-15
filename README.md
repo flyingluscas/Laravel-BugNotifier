@@ -16,7 +16,7 @@ This is a **Laravel 5.x** package to help you track down bugs on your applicatio
 Via Composer
 
 ``` bash
-$ composer require flyingluscas/BugNotifier
+$ composer require flyingluscas/bug-notifier
 ```
 
 ## Usage
