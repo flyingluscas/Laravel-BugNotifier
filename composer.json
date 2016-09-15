@@ -1,7 +1,7 @@
 {
     "name": "flyingluscas/BugNotifier",
     "type": "library",
-    "description": "This is a Laravel 5.x package to help you track down bugs on your applications by using notifications.",
+    "description": "Track down bugs on your applications by using notifications.",
     "keywords": [
         "flyingluscas",
         "BugNotifier",
