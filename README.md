@@ -3,6 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
+[![StyleCI][ico-styleci]][link-styleci]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -53,12 +54,14 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-version]: https://img.shields.io/packagist/v/flyingluscas/bug-notifier.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/flyingluscas/Laravel-BugNotifier/master.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/68256859/shield?branch=master
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/flyingluscas/Laravel-BugNotifier.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/flyingluscas/Laravel-BugNotifier.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/flyingluscas/bug-notifier.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/flyingluscas/bug-notifier
 [link-travis]: https://travis-ci.org/flyingluscas/Laravel-BugNotifier
+[link-styleci]: https://styleci.io/repos/68256859
 [link-scrutinizer]: https://scrutinizer-ci.com/g/flyingluscas/Laravel-BugNotifier/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/flyingluscas/Laravel-BugNotifier
 [link-downloads]: https://packagist.org/packages/flyingluscas/bug-notifier
