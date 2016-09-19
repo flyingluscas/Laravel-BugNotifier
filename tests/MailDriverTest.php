@@ -2,26 +2,31 @@
 
 namespace FlyingLuscas\BugNotifier;
 
+use Mockery;
 use MailThief\Testing\InteractsWithMail;
 
 class MailDriverTest extends TestCase
 {
     use InteractsWithMail;
 
-    public function testHandle()
+    public function testSendNotificationEmail()
     {
-        $dummyMessage = 'Some dummy message';
-
         $driver = new Drivers\MailDriver;
-        $message = new Message(new DummyException($dummyMessage));
+
+        $title = 'Some dummy title';
+        $body = 'Some dummy message';
+
+        $message = Mockery::mock(Message::class, function ($mock) use ($title, $body) {
+            $mock->shouldReceive('getTitle')->andReturn($title);
+            $mock->shouldReceive('getBody')->andReturn($body);
+        });
 
         $excpectedMailTo = config('bugnotifier.drivers.mail.to.address');
-        $excpectedMailSubject = sprintf('DummyException in %s line %d', basename(__FILE__), (__LINE__ - 3));
 
         $driver->handle($message);
 
         $this->seeMessageFor($excpectedMailTo);
-        $this->seeMessageWithSubject($excpectedMailSubject);
-        $this->assertTrue($this->lastMessage()->contains($dummyMessage));
+        $this->seeMessageWithSubject($title);
+        $this->assertTrue($this->lastMessage()->contains($body));
     }
 }

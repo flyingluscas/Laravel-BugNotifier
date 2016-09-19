@@ -4,7 +4,6 @@ namespace FlyingLuscas\BugNotifier;
 
 use Mockery;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use FlyingLuscas\BugNotifier\BugNotifierServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {

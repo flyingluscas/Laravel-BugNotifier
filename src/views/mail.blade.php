@@ -1,1 +1,1 @@
-{!! nl2br($mail->getBody()) !!}
+{!! nl2br($body) !!}

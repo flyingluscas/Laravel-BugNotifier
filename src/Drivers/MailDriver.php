@@ -16,14 +16,16 @@ class MailDriver implements DriverContract
      */
     public function handle(Message $message)
     {
-        $view = $this->getEmailView();
+        $view = $this->getMailViewLink();
 
         $name = $this->getMailDestinationName();
         $address = $this->getMailDestinationAddress();
         $subject = $message->getTitle();
+        $body = $message->getBody();
 
         Mail::send($view, [
-            'mail' => $message,
+            'body' => $body,
+            'subject' => $subject,
         ], function ($mail) use ($subject, $address, $name) {
             $mail->subject($subject)->to($address, $name);
         });
@@ -54,7 +56,7 @@ class MailDriver implements DriverContract
      *
      * @return string
      */
-    protected function getEmailView()
+    protected function getMailViewLink()
     {
         return config('bugnotifier.drivers.mail.view');
     }
