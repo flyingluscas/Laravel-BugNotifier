@@ -7,7 +7,7 @@ return [
     'drivers' => [
         'mail' => [
             'view' => 'bugnotifier::mail',
-            'from' => ['address' => 'hello@example.com', 'name' => null],
+            'to' => ['address' => 'hello@example.com', 'name' => null],
         ],
     ],
 
