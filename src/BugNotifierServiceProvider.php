@@ -13,7 +13,11 @@ class BugNotifierServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->mergeConfigFrom(__DIR__.'/config.php', 'bugnotifier');
+
+        $this->publishes([
+            __DIR__.'/config.php' => config_path('bugnotifier.php'),
+        ], 'config');
     }
 
     /**
