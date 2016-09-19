@@ -61,7 +61,7 @@ class Message
         $message = $e->getMessage();
         $trace = $e->getTraceAsString();
 
-        $this->content = sprintf("%s in %s line %d\n\n%s\n\n%s", $classname, $filename, $line, $message, $trace);
+        $this->body = sprintf("%s in %s line %d\n\n%s\n\n%s", $classname, $filename, $line, $message, $trace);
 
         return $this;
     }
@@ -73,7 +73,7 @@ class Message
      */
     public function getBody()
     {
-        return $this->content;
+        return $this->body;
     }
 
     /**
