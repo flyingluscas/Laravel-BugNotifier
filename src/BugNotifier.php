@@ -18,7 +18,7 @@ class BugNotifier
     ];
 
     /**
-     * Fire a notification for the given exception.
+     * Fire a notification for the given exception using the configured driver.
      *
      * @param \Exception $e
      *
@@ -33,11 +33,11 @@ class BugNotifier
         $message = new Message($e);
         $driverClass = $this->getNotificationDriver();
 
-        return $this->sendNotification($message, new $driver);
+        return $this->sendNotification($message, new $driverClass);
     }
 
     /**
-     * Send notificaiton using the given driver.
+     * Send notification using the given driver.
      *
      * @param \FlyingLuscas\BugNotifier\Message                $message
      * @param \FlyingLuscas\BugNotifier\Drivers\DriverContract $driver
