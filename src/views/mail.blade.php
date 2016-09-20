@@ -30,9 +30,7 @@
 
 <body>
 
-    <pre>
-    {{ $body }}
-    </pre>
+    <pre>{{ $body }}</pre>
 
 </body>
 </html>
