@@ -29,6 +29,8 @@ class BugNotifierServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('BugNotifier', function () {
+            return new BugNotifier;
+        });
     }
 }

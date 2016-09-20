@@ -7,7 +7,7 @@ use FlyingLuscas\BugNotifier\Drivers\MailDriver;
 use FlyingLuscas\BugNotifier\Drivers\DriverContract;
 use FlyingLuscas\BugNotifier\Exceptions\InvalidDriverNameException;
 
-class Notify
+class BugNotifier
 {
     /**
      * Notification drivers.
