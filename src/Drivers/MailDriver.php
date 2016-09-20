@@ -17,7 +17,6 @@ class MailDriver implements DriverContract
     public function handle(Message $message)
     {
         $view = $this->getMailViewLink();
-
         $name = $this->getMailDestinationName();
         $address = $this->getMailDestinationAddress();
         $subject = $message->getTitle();
