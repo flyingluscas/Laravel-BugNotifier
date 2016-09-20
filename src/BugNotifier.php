@@ -2,7 +2,6 @@
 
 namespace FlyingLuscas\BugNotifier;
 
-use FlyingLuscas\BugNotifier\Message;
 use FlyingLuscas\BugNotifier\Drivers\MailDriver;
 use FlyingLuscas\BugNotifier\Drivers\DriverContract;
 use FlyingLuscas\BugNotifier\Exceptions\InvalidDriverNameException;
