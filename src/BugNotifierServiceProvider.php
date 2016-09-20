@@ -20,10 +20,6 @@ class BugNotifierServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config.php' => config_path('bugnotifier.php'),
         ], 'config');
-
-        $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/bugnotifier'),
-        ], 'views');
     }
 
     /**
