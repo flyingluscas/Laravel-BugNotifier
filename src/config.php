@@ -2,9 +2,27 @@
 
 return [
 
+    /*
+    |--------------------------------------------------------------------------
+    | Environments
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure all the environments that Bug Notifier
+    | should watch for bugs, you can set as many environments you need.
+    */
+
     'environments' => [
         'local', 'production',
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ignore
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the exceptions that Bug Notifier should not report,
+    | exceptions that should be ignored when thrown by your application.
+    */
 
     'ignore' => [
         Illuminate\Auth\AuthenticationException::class,
@@ -15,7 +33,25 @@ return [
         Symfony\Component\HttpKernel\Exception\HttpException::class,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Driver
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the driver used to send the notifications
+    | when a bug is caught in your application.
+    */
+
     'driver' => 'mail',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Driver
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure all the supported drivers by Bug Notifier,
+    | you can use only one of them to send the notifications.
+    */
 
     'drivers' => [
         'mail' => [

@@ -29,8 +29,6 @@
 </head>
 
 <body>
-
     <pre>{{ $body }}</pre>
-
 </body>
 </html>
