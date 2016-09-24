@@ -10,3 +10,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - E-mail driver
 - Bitbucket driver
 - Github driver
+
+## v1.0.0 - 2016-09-23
+
+### Added
+- E-mail driver
