@@ -38,8 +38,8 @@ return [
     | Driver
     |--------------------------------------------------------------------------
     |
-    | Here you may configure the driver used to send the notifications
-    | when a bug is caught in your application.
+    | Here you may configure the driver used to send the notifications when
+    | an exception is thrown in your application.
     */
 
     'driver' => 'mail',
@@ -50,7 +50,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may configure all the supported drivers by Bug Notifier,
-    | you can use only one of them to send the notifications.
+    | but you can use only one of them to send the notifications.
     */
 
     'drivers' => [
