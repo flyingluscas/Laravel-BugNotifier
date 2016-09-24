@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may configure all the environments that Bug Notifier
-    | should watch for bugs, you can set as many environments you need.
+    | should watch for bugs, you can set multiple environments.
     */
 
     'environments' => [
