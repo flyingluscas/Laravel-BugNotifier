@@ -9,7 +9,7 @@
 
 This is a **Laravel 5.x** package to help you track down bugs on your applications by using notifications.
 
-BugNotifier will catch the exceptions thrown by Laravel and notify you through e-mail, Github issues or Bitbucket issues.
+BugNotifier will catch the exceptions thrown by Laravel and notify you through e-mail.
 
 ## Install
 
