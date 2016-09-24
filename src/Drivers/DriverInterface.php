@@ -4,7 +4,7 @@ namespace FlyingLuscas\BugNotifier\Drivers;
 
 use FlyingLuscas\BugNotifier\Message;
 
-interface DriverContract
+interface DriverInterface
 {
     /**
      * Handle the notification message.

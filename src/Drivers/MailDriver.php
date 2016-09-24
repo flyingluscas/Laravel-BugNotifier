@@ -5,7 +5,7 @@ namespace FlyingLuscas\BugNotifier\Drivers;
 use Illuminate\Support\Facades\Mail;
 use FlyingLuscas\BugNotifier\Message;
 
-class MailDriver implements DriverContract
+class MailDriver implements DriverInterface
 {
     /**
      * Send e-mail message.
