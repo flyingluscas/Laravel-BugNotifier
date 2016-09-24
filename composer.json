@@ -1,7 +1,7 @@
 {
     "name": "flyingluscas/bug-notifier",
     "type": "library",
-    "description": "Track down bugs on your applications by using notifications.",
+    "description": "Get notified every time an exception is thrown in your application.",
     "keywords": [
         "flyingluscas",
         "BugNotifier",
