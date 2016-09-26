@@ -31,6 +31,7 @@ return [
         Illuminate\Auth\Access\AuthorizationException::class,
         Illuminate\Database\Eloquent\ModelNotFoundException::class,
         Symfony\Component\HttpKernel\Exception\HttpException::class,
+        Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
     ],
 
     /*

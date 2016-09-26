@@ -3,7 +3,7 @@
 namespace FlyingLuscas\BugNotifier;
 
 use FlyingLuscas\BugNotifier\Drivers\MailDriver;
-use FlyingLuscas\BugNotifier\Drivers\DriverContract;
+use FlyingLuscas\BugNotifier\Drivers\DriverInterface;
 use FlyingLuscas\BugNotifier\Exceptions\InvalidDriverNameException;
 
 class BugNotifier
@@ -40,11 +40,11 @@ class BugNotifier
      * Send notification using the given driver.
      *
      * @param \FlyingLuscas\BugNotifier\Message                $message
-     * @param \FlyingLuscas\BugNotifier\Drivers\DriverContract $driver
+     * @param \FlyingLuscas\BugNotifier\Drivers\DriverInterface $driver
      *
      * @return mixed
      */
-    private function sendNotification(Message $message, DriverContract $driver)
+    private function sendNotification(Message $message, DriverInterface $driver)
     {
         return $driver->handle($message);
     }

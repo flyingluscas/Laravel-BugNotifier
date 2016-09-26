@@ -11,6 +11,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Bitbucket driver
 - Github driver
 
+## v1.0.1 - 2016-09-26
+
+### Fixed
+- Ignoring 404 exceptions by default
+- Fixed type hint of the driver argument on the sendNotification of the class BugNotifier
+
 ## v1.0.0 - 2016-09-23
 
 ### Added
