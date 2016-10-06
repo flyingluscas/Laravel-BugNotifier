@@ -52,7 +52,7 @@ Inside the configuration file, you can add the **environments** that BugNotifier
 configure a list of **exceptions that should be ignored** and choose the **driver used to send the notifications**.
 
 ## 3. Setting up
-Ok, now that out service provider is in place and our configuration file is set,
+Ok, now that our service provider is in place and our configuration file is set,
 let's set up the BugNotifier to watch for exceptions in our application.
 
 Go to your `app/Exceptions/Handler.php` file, and scroll down to the `report` method, this method is very important,
