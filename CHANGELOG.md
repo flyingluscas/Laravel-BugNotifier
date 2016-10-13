@@ -7,7 +7,6 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ## Unreleased
 
 ### Added
-- E-mail driver
 - Bitbucket driver
 - Github driver
 
