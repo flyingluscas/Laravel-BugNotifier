@@ -29,6 +29,7 @@ return [
         Illuminate\Session\TokenMismatchException::class,
         Illuminate\Validation\ValidationException::class,
         Illuminate\Auth\Access\AuthorizationException::class,
+        Illuminate\Http\Exception\HttpResponseException::class,
         Illuminate\Database\Eloquent\ModelNotFoundException::class,
         Symfony\Component\HttpKernel\Exception\HttpException::class,
         Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
