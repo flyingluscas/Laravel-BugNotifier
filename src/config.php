@@ -4,6 +4,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Driver
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the driver used to send the notifications when
+    | an exception is thrown in your application.
+    */
+
+    'driver' => 'mail',
+
+    /*
+    |--------------------------------------------------------------------------
     | Environments
     |--------------------------------------------------------------------------
     |
@@ -37,29 +48,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Driver
+    | Mail Driver
     |--------------------------------------------------------------------------
     |
-    | Here you may configure the driver used to send the notifications when
-    | an exception is thrown in your application.
+    | Here you may configure the mail driver, choose the view and the e-mail
+    | address that will be notified when an exception is thrown.
     */
 
-    'driver' => 'mail',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Drivers
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure all the supported drivers by Bug Notifier,
-    | but you can use only one of them to send the notifications.
-    */
-
-    'drivers' => [
-        'mail' => [
-            'view' => 'bugnotifier::mail',
-            'to' => ['address' => 'hello@example.com', 'name' => null],
-        ],
+    'mail' => [
+        'view' => 'bugnotifier::mail',
+        'to' => ['address' => 'hello@example.com', 'name' => null],
+        'driver' => FlyingLuscas\BugNotifier\Drivers\MailDriver::class,
     ],
 
 ];
