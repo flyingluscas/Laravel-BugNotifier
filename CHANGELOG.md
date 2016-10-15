@@ -7,6 +7,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ## Unreleased
 
 ### Added
+- Slack driver.
 - Bitbucket driver.
 - Github driver.
 
