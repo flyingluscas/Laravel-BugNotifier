@@ -5,7 +5,7 @@ namespace FlyingLuscas\BugNotifier\Drivers;
 use Illuminate\Support\Facades\Mail;
 use FlyingLuscas\BugNotifier\Message;
 
-class MailDriver implements DriverInterface
+class MailDriver extends Driver implements DriverInterface
 {
     /**
      * Send e-mail message.
@@ -16,47 +16,16 @@ class MailDriver implements DriverInterface
      */
     public function handle(Message $message)
     {
-        $view = $this->getMailViewLink();
-        $name = $this->getMailDestinationName();
-        $address = $this->getMailDestinationAddress();
+        $view = $this->config('view');
+        $address = $this->config('to.address');
         $subject = $message->getTitle();
         $body = $message->getBody();
 
         Mail::send($view, [
             'body' => $body,
             'subject' => $subject,
-        ], function ($mail) use ($subject, $address, $name) {
-            $mail->subject($subject)->to($address, $name);
+        ], function ($mail) use ($subject, $address) {
+            $mail->subject($subject)->to($address);
         });
-    }
-
-    /**
-     * Get e-mail destination name.
-     *
-     * @return string
-     */
-    protected function getMailDestinationName()
-    {
-        return config('bugnotifier.mail.to.name');
-    }
-
-    /**
-     * Get e-mail destination address.
-     *
-     * @return string
-     */
-    protected function getMailDestinationAddress()
-    {
-        return config('bugnotifier.mail.to.address');
-    }
-
-    /**
-     * Get the view link for the e-mail message.
-     *
-     * @return string
-     */
-    protected function getMailViewLink()
-    {
-        return config('bugnotifier.mail.view');
     }
 }
