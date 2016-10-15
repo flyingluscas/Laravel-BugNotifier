@@ -21,7 +21,7 @@ class MailDriverTest extends TestCase
             $mock->shouldReceive('getBody')->andReturn($body);
         });
 
-        $excpectedMailTo = config('bugnotifier.drivers.mail.to.address');
+        $excpectedMailTo = config('bugnotifier.mail.to.address');
 
         $driver->handle($message);
 

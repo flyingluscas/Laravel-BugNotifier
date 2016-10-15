@@ -37,7 +37,7 @@ class MailDriver implements DriverInterface
      */
     protected function getMailDestinationName()
     {
-        return config('bugnotifier.drivers.mail.to.name');
+        return config('bugnotifier.mail.to.name');
     }
 
     /**
@@ -47,7 +47,7 @@ class MailDriver implements DriverInterface
      */
     protected function getMailDestinationAddress()
     {
-        return config('bugnotifier.drivers.mail.to.address');
+        return config('bugnotifier.mail.to.address');
     }
 
     /**
@@ -57,6 +57,6 @@ class MailDriver implements DriverInterface
      */
     protected function getMailViewLink()
     {
-        return config('bugnotifier.drivers.mail.view');
+        return config('bugnotifier.mail.view');
     }
 }
