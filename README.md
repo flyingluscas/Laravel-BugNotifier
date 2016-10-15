@@ -26,17 +26,10 @@ $ composer require flyingluscas/bug-notifier
 Add the `BugNotifierServiceProvider` under the `providers` section on `config/app.php` file.
 
 ``` php
-...
-
-    'providers' => [
-        ...
-        
-        FlyingLuscas\BugNotifier\BugNotifierServiceProvider::class,
-        
-        ...
-    ],
-
-...
+'providers' => [
+    // ...
+    FlyingLuscas\BugNotifier\BugNotifierServiceProvider::class,
+],
 ```
 
 ## 2. Configuration
@@ -61,27 +54,17 @@ here you can intercept any exceptions thrown by Laravel, so use the `Notify` **f
 ``` php
 use FlyingLuscas\BugNotifier\Facades\Notify;
 
-...
+// ...
 
-/**
- * Report or log an exception.
- *
- * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
- *
- * @param  \Exception  $exception
- * @return void
- */
 public function report(Exception $exception)
 {
     parent::report($exception);
 
     Notify::exception($exception);
 }
-
-...
 ```
 
-And that's it, you are ready to track down every exception thrown by your application and get notified.
+And that's it, you are ready to track down every exception thrown by your application and be notified about it.
 
 ## Change log
 
