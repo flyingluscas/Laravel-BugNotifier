@@ -64,7 +64,7 @@ public function report(Exception $exception)
 }
 ```
 
-And that's it, you are ready to track down every exception thrown by your application and be notified about it.
+And that's it, you are ready to track down every exception thrown by your application and be notified about it, if you wanna build your own notification driver, [see this wiki for more information][link-wiki].
 
 ## Change log
 
@@ -111,3 +111,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-downloads]: https://packagist.org/packages/flyingluscas/bug-notifier
 [link-author]: https://github.com/flyingluscas
 [link-contributors]: ../../contributors
+[link-wiki]: https://github.com/flyingluscas/Laravel-BugNotifier/wiki/Custom-Drivers
