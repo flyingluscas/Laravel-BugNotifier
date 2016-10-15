@@ -2,21 +2,11 @@
 
 namespace FlyingLuscas\BugNotifier;
 
-use FlyingLuscas\BugNotifier\Drivers\MailDriver;
 use FlyingLuscas\BugNotifier\Drivers\DriverInterface;
 use FlyingLuscas\BugNotifier\Exceptions\InvalidDriverNameException;
 
 class BugNotifier
 {
-    /**
-     * Notification drivers.
-     *
-     * @var array
-     */
-    protected $drivers = [
-        'mail' => MailDriver::class,
-    ];
-
     /**
      * Fire a notification for the given exception using the configured driver.
      *
@@ -57,12 +47,13 @@ class BugNotifier
     private function getNotificationDriver()
     {
         $use = config('bugnotifier.driver');
+        $driver = config(sprintf('bugnotifier.%s.driver', $use));
 
-        if (! array_key_exists($use, $this->drivers)) {
+        if (! $driver) {
             throw new InvalidDriverNameException(sprintf('Driver "%s" not supported.', $use));
         }
 
-        return $this->drivers[$use];
+        return $driver;
     }
 
     /**
