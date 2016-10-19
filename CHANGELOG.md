@@ -10,6 +10,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Slack driver.
 - Bitbucket driver.
 - Github driver.
+- Multiple e-mail addresses for the MailDriver
+- More detailed notifications
 
 ## v2.0.2 - 2016-10-15
 
