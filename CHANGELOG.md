@@ -12,6 +12,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Github driver.
 - Multiple e-mail addresses for the MailDriver
 - More detailed notifications
+- Command to gerenerate custom Driver classes based on stubs
 
 ## v2.0.2 - 2016-10-15
 
