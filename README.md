@@ -22,7 +22,7 @@ $ composer require flyingluscas/bug-notifier
 
 ## Usage
 
-## 1. Service Provider
+### 1. Service Provider
 Add the `BugNotifierServiceProvider` under the `providers` section on `config/app.php` file.
 
 ``` php
@@ -32,7 +32,7 @@ Add the `BugNotifierServiceProvider` under the `providers` section on `config/ap
 ],
 ```
 
-## 2. Configuration
+### 2. Configuration
 Run this command in your terminal to publish the configuration file.
 
 ``` bash
@@ -44,7 +44,7 @@ This command will generate the `config/bugnotifier.php` config file.
 Inside the configuration file, you can add the **environments** that BugNotifier should watch for exceptions,
 configure a list of **exceptions that should be ignored** and choose the **driver used to send the notifications**.
 
-## 3. Setting up
+### 3. Setting up
 Ok, now that our service provider is in place and our configuration file is set,
 let's set up the BugNotifier to watch for exceptions in our application.
 
