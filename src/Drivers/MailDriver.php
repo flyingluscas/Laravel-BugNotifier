@@ -17,15 +17,31 @@ class MailDriver extends Driver implements DriverInterface
     public function handle(Message $message)
     {
         $view = $this->config('view');
-        $address = $this->config('to.address');
+        $addresses = $this->getEmailAddresses();
         $subject = $message->getTitle();
         $body = $message->getBody();
 
         Mail::send($view, [
             'body' => $body,
             'subject' => $subject,
-        ], function ($mail) use ($subject, $address) {
-            $mail->subject($subject)->to($address);
+        ], function ($mail) use ($subject, $addresses) {
+            $mail->subject($subject)->to($addresses);
         });
+    }
+
+    /**
+     * Get e-mail address list.
+     *
+     * @return array
+     */
+    private function getEmailAddresses()
+    {
+        $address = $this->config('to.address');
+
+        if ($address) {
+            return [$address];
+        }
+
+        return $this->config('to');
     }
 }

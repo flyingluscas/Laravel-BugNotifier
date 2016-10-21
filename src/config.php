@@ -57,7 +57,9 @@ return [
 
     'mail' => [
         'view' => 'bugnotifier::mail',
-        'to' => ['address' => 'hello@example.com', 'name' => null],
+        'to' => [
+            'hello@example.com', 'another@example.com',
+        ],
         'driver' => FlyingLuscas\BugNotifier\Drivers\MailDriver::class,
     ],
 

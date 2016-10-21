@@ -10,16 +10,17 @@ abstract class Driver
      * Get the driver configurations.
      *
      * @param  string $name
+     * @param  mixed  $default
      *
      * @return mixed
      */
-    protected function config($name = null)
+    protected function config($name = null, $default = null)
     {
         if (is_null($name)) {
-            return config($this->getConfigPath());
+            return config($this->getConfigPath(), $default);
         }
 
-        return config(sprintf('%s.%s', $this->getConfigPath(), $name));
+        return config(sprintf('%s.%s', $this->getConfigPath(), $name), $default);
     }
 
     /**

@@ -10,9 +10,13 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Slack driver.
 - Bitbucket driver.
 - Github driver.
-- Multiple e-mail addresses for the MailDriver
-- More detailed notifications
-- Command to gerenerate custom Driver classes based on stubs
+- More detailed notifications.
+- Command to gerenerate custom Driver classes based on stubs.
+
+## v2.0.3 - 2016-10-21
+
+### Added
+- Multiple e-mail addresses for the MailDriver.
 
 ## v2.0.2 - 2016-10-15
 
