@@ -24,7 +24,8 @@ class MessageTest extends TestCase
 
         $thrown = new $e($description);
         $message = new Message($thrown);
-        $expectedBody = sprintf("%s in %s line %d\n\n%s\n\n%s", $e, __FILE__, (__LINE__ - 2), $description, $thrown->getTraceAsString());
+        $at = new \DateTime(null, new \DateTimeZone(\Config::get('app.timezone')));
+        $expectedBody = sprintf("[%s] %s in %s line %d\n\n%s\n\n%s", $at->format('Y-m-d H:i:s'), $e, __FILE__, (__LINE__ - 3), $description, $thrown->getTraceAsString());
 
         $this->assertEquals($expectedBody, $message->getBody());
     }
