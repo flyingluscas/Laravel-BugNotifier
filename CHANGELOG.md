@@ -12,6 +12,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Github driver.
 - More detailed notifications.
 - Command to gerenerate custom Driver classes based on stubs.
+- Better tests
+
+## v2.0.4 - 2016-10-29
+
+### Added
+- Date on the message body
 
 ## v2.0.3 - 2016-10-21
 
