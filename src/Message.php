@@ -63,14 +63,12 @@ class Message
 
         $at = new \DateTime(null, new \DateTimeZone(\Config::get('app.timezone')));
 
-        $this->body = sprintf("[%s] %s in %s line %d\n\n%s\n\n%s",
-            $at,
-            $classname,
-            $filename,
-            $line,
-            $message,
-            $trace
-        );
+        $this->body = '['.$at->format('Y-m-d H:i:s').'] ';
+        $this->body .= $classname.' in ';
+        $this->body .= $filename.' ';
+        $this->body .= 'line '.$line."\n\n";
+        $this->body .= $message."\n\n";
+        $this->body .= $trace;
 
         return $this;
     }
