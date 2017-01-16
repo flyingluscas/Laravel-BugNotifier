@@ -21,7 +21,7 @@ class MailDriver extends Driver implements DriverInterface
         $subject = $message->getTitle();
         $body = $message->getBody();
 
-        Mail::send($view, [
+        Mail::queue($view, [
             'body' => $body,
             'subject' => $subject,
         ], function ($mail) use ($subject, $addresses) {
