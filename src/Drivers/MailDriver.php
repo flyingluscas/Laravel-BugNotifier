@@ -2,8 +2,9 @@
 
 namespace FlyingLuscas\BugNotifier\Drivers;
 
-use Illuminate\Support\Facades\Mail;
+use FlyingLuscas\BugNotifier\Mail\BugMail;
 use FlyingLuscas\BugNotifier\Message;
+use Illuminate\Support\Facades\Mail;
 
 class MailDriver extends Driver implements DriverInterface
 {
@@ -21,12 +22,8 @@ class MailDriver extends Driver implements DriverInterface
         $subject = $message->getTitle();
         $body = $message->getBody();
 
-        Mail::send($view, [
-            'body' => $body,
-            'subject' => $subject,
-        ], function ($mail) use ($subject, $addresses) {
-            $mail->subject($subject)->to($addresses);
-        });
+        Mail::to($addresses)
+            ->queue(new BugMail($view, $subject, $body));
     }
 
     /**
