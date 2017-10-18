@@ -2,9 +2,9 @@
 
 namespace FlyingLuscas\BugNotifier\Drivers;
 
-use FlyingLuscas\BugNotifier\Mail\BugMail;
-use FlyingLuscas\BugNotifier\Message;
 use Illuminate\Support\Facades\Mail;
+use FlyingLuscas\BugNotifier\Message;
+use FlyingLuscas\BugNotifier\Mail\BugMail;
 
 class MailDriver extends Driver implements DriverInterface
 {
