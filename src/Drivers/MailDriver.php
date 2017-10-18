@@ -21,7 +21,7 @@ class MailDriver extends Driver implements DriverInterface
         $addresses = $this->getEmailAddresses();
         $subject = $message->getTitle();
         $body = $message->getBody();
-      
+
         Mail::to($addresses)
             ->queue(new BugMail($view, $subject, $body));
     }
