@@ -41,5 +41,4 @@ class MailDriver extends Driver implements DriverInterface
 
         return $this->config('to');
     }
-
 }
